@@ -50,6 +50,6 @@
 - 脚本 `run_00~06` + `DEMO_GUIDE.md` / `PROJECT_PLAN.md` / `DEVELOPMENT_LOG.md`
 
 ## F. 待办 / 下一步优化
-- [ ] 演员走位与机器人路径无交集校验；多次随机化起点回归测试
+- [x] **端到端回归工具**：`scripts/run_regression.sh`（无头自动 N 次跑"门口→讲台"，输出用时/成功/落点误差汇总）——偶发暴露了 SLAM 地图锚点漂移（个别 run 终点 map.y≈0 偏离讲台 ~3m，多数 run 精确到 ~0.02m），需进一步压制：候选＝启用 IMU 融合 A/B、或导航时减少移动 actor 干扰
 - [ ] 把 yaml 中的绝对路径(bt xml)改为 launch 运行时展开，便于移植
 - [ ] 巡游建图节点回归验证（功能已写，live 主流程不依赖）

@@ -17,6 +17,7 @@ cd ~/tb3_lecture_ws/scripts
 ./run_04_go.sh      # ④ 一键开到讲台
 ./run_05_host.sh    # ⑤ 上位机总览(RViz+控制)
 # 随时控制: ./run_06_cmd.sh go|stop|return|replan
+# 交付验收(无头自动回归N次到讲台): ./run_regression.sh 5
 ```
 
 先跑一次 `./run_00_build.sh` 编译；每改世界/节点后重跑编译。
