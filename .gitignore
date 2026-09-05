@@ -1,0 +1,14 @@
+# ROS2 colcon 编译产物
+build/
+install/
+log/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.egg-info/
+
+# 打包产物 / 临时
+*.tar.gz
+*.log
+.DS_Store

@@ -1,0 +1,93 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Plane Cell Count: 40
+      Reference Frame: <Fixed Frame>
+      Enabled: true
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Frame Timeout: 15
+      Marker Scale: 1
+      Show Names: true
+      Frames:
+        All Enabled: true
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel (Waffle Pi)
+      Enabled: true
+      Description Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+    - Class: rviz_default_plugins/Map
+      Name: LiveMap(Cartographer)
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map
+      Alpha: 0.7
+      Color Scheme: map
+      Draw Behind: false
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Enabled: true
+      Topic:
+        Depth: 5
+        Reliability Policy: Reliable
+        Value: /scan
+      Color: 255; 0; 0
+      Size (m): 0.03
+      Style: Points
+    - Class: rviz_default_plugins/Path
+      Name: Global Plan (实时规划路线)
+      Enabled: true
+      Topic:
+        Depth: 5
+        Reliability Policy: Reliable
+        Value: /plan
+      Color: 30; 200; 30
+      Line Style: Lines
+      Line Width: 0.06
+      Offset: 0.0
+    - Class: rviz_default_plugins/Path
+      Name: Local Plan (当前避障轨迹)
+      Enabled: true
+      Topic:
+        Depth: 5
+        Reliability Policy: Reliable
+        Value: /local_plan
+      Color: 80; 170; 255
+      Line Style: Lines
+      Line Width: 0.05
+      Offset: 0.0
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Goal/Status (lecture_control)
+      Enabled: true
+      Topic:
+        Depth: 5
+        Reliability Policy: Reliable
+        Value: /lecture/markers
+  Global Options:
+    Fixed Frame: map
+    Frame Rate: 30
+    Background Color: 48; 48; 48
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Current View
+      Target Frame: <Fixed Frame>
+      Distance: 26
+      X: 5.0
+      Y: -1.5

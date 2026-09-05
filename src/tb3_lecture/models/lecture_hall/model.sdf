@@ -1,0 +1,2218 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="lecture_hall">
+    <static>true</static>
+    <pose>0 0 0 0 0 0</pose>
+    <link name='wall_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='wall_back_col'>
+        <pose>-0.0750 4.0000 1.3000 0 0 0</pose>
+        <geometry><box><size>0.1500 8.3000 2.6000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='wall_back_vis'>
+        <pose>-0.0750 4.0000 1.3000 0 0 0</pose>
+        <geometry><box><size>0.1500 8.3000 2.6000</size></box></geometry>
+        <material><ambient>0.84 0.85 0.87 1</ambient><diffuse>0.84 0.85 0.87 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='wall_front'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='wall_front_col'>
+        <pose>10.0750 4.0000 1.3000 0 0 0</pose>
+        <geometry><box><size>0.1500 8.3000 2.6000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='wall_front_vis'>
+        <pose>10.0750 4.0000 1.3000 0 0 0</pose>
+        <geometry><box><size>0.1500 8.3000 2.6000</size></box></geometry>
+        <material><ambient>0.84 0.85 0.87 1</ambient><diffuse>0.84 0.85 0.87 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='wall_left'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='wall_left_col'>
+        <pose>5.0000 -0.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>10.3000 0.1500 2.6000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='wall_left_vis'>
+        <pose>5.0000 -0.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>10.3000 0.1500 2.6000</size></box></geometry>
+        <material><ambient>0.84 0.85 0.87 1</ambient><diffuse>0.84 0.85 0.87 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='wall_right_a'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='wall_right_a_col'>
+        <pose>0.7250 8.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>1.4500 0.1500 2.6000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='wall_right_a_vis'>
+        <pose>0.7250 8.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>1.4500 0.1500 2.6000</size></box></geometry>
+        <material><ambient>0.84 0.85 0.87 1</ambient><diffuse>0.84 0.85 0.87 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='wall_right_b'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='wall_right_b_col'>
+        <pose>6.1750 8.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>7.6500 0.1500 2.6000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='wall_right_b_vis'>
+        <pose>6.1750 8.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>7.6500 0.1500 2.6000</size></box></geometry>
+        <material><ambient>0.84 0.85 0.87 1</ambient><diffuse>0.84 0.85 0.87 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='door_jamb_1_45'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='door_jamb_1_45_col'>
+        <pose>1.4500 8.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>0.0800 0.1200 2.6000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='door_jamb_1_45_vis'>
+        <pose>1.4500 8.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>0.0800 0.1200 2.6000</size></box></geometry>
+        <material><ambient>0.16 0.16 0.18 1</ambient><diffuse>0.16 0.16 0.18 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='door_jamb_2_35'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='door_jamb_2_35_col'>
+        <pose>2.3500 8.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>0.0800 0.1200 2.6000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='door_jamb_2_35_vis'>
+        <pose>2.3500 8.0750 1.3000 0 0 0</pose>
+        <geometry><box><size>0.0800 0.1200 2.6000</size></box></geometry>
+        <material><ambient>0.16 0.16 0.18 1</ambient><diffuse>0.16 0.16 0.18 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='floor'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='floor_col'>
+        <pose>5.0000 4.0000 0.0050 0 0 0</pose>
+        <geometry><box><size>10.0000 8.0000 0.0200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='floor_vis'>
+        <pose>5.0000 4.0000 0.0050 0 0 0</pose>
+        <geometry><box><size>10.0000 8.0000 0.0200</size></box></geometry>
+        <material><ambient>0.6 0.47 0.34 1</ambient><diffuse>0.6 0.47 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padL0'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padL0_col'>
+        <pose>1.5500 2.2250 0.0125 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.0250</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padL0_vis'>
+        <pose>1.5500 2.2250 0.0125 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.0250</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padR0'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padR0_col'>
+        <pose>1.5500 5.6000 0.0125 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.0250</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padR0_vis'>
+        <pose>1.5500 5.6000 0.0125 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.0250</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL0_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL0_0_back_col'>
+        <pose>1.4700 1.4000 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL0_0_back_vis'>
+        <pose>1.4700 1.4000 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL0_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL0_0_seat_col'>
+        <pose>1.5700 1.4000 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL0_0_seat_vis'>
+        <pose>1.5700 1.4000 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL0_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL0_1_back_col'>
+        <pose>1.4700 1.9000 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL0_1_back_vis'>
+        <pose>1.4700 1.9000 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL0_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL0_1_seat_col'>
+        <pose>1.5700 1.9000 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL0_1_seat_vis'>
+        <pose>1.5700 1.9000 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL0_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL0_2_back_col'>
+        <pose>1.4700 2.4000 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL0_2_back_vis'>
+        <pose>1.4700 2.4000 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL0_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL0_2_seat_col'>
+        <pose>1.5700 2.4000 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL0_2_seat_vis'>
+        <pose>1.5700 2.4000 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL0_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL0_3_back_col'>
+        <pose>1.4700 2.9000 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL0_3_back_vis'>
+        <pose>1.4700 2.9000 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL0_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL0_3_seat_col'>
+        <pose>1.5700 2.9000 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL0_3_seat_vis'>
+        <pose>1.5700 2.9000 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR0_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR0_0_back_col'>
+        <pose>1.4700 4.9500 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR0_0_back_vis'>
+        <pose>1.4700 4.9500 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR0_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR0_0_seat_col'>
+        <pose>1.5700 4.9500 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR0_0_seat_vis'>
+        <pose>1.5700 4.9500 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR0_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR0_1_back_col'>
+        <pose>1.4700 5.4500 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR0_1_back_vis'>
+        <pose>1.4700 5.4500 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR0_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR0_1_seat_col'>
+        <pose>1.5700 5.4500 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR0_1_seat_vis'>
+        <pose>1.5700 5.4500 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR0_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR0_2_back_col'>
+        <pose>1.4700 5.9500 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR0_2_back_vis'>
+        <pose>1.4700 5.9500 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR0_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR0_2_seat_col'>
+        <pose>1.5700 5.9500 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR0_2_seat_vis'>
+        <pose>1.5700 5.9500 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR0_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR0_3_back_col'>
+        <pose>1.4700 6.4500 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR0_3_back_vis'>
+        <pose>1.4700 6.4500 0.6050 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR0_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR0_3_seat_col'>
+        <pose>1.5700 6.4500 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR0_3_seat_vis'>
+        <pose>1.5700 6.4500 0.3950 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padL1'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padL1_col'>
+        <pose>2.2700 2.2250 0.0350 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.0700</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padL1_vis'>
+        <pose>2.2700 2.2250 0.0350 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.0700</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padR1'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padR1_col'>
+        <pose>2.2700 5.6000 0.0350 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.0700</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padR1_vis'>
+        <pose>2.2700 5.6000 0.0350 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.0700</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL1_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL1_0_back_col'>
+        <pose>2.1900 1.4000 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL1_0_back_vis'>
+        <pose>2.1900 1.4000 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL1_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL1_0_seat_col'>
+        <pose>2.2900 1.4000 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL1_0_seat_vis'>
+        <pose>2.2900 1.4000 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL1_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL1_1_back_col'>
+        <pose>2.1900 1.9000 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL1_1_back_vis'>
+        <pose>2.1900 1.9000 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL1_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL1_1_seat_col'>
+        <pose>2.2900 1.9000 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL1_1_seat_vis'>
+        <pose>2.2900 1.9000 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL1_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL1_2_back_col'>
+        <pose>2.1900 2.4000 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL1_2_back_vis'>
+        <pose>2.1900 2.4000 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL1_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL1_2_seat_col'>
+        <pose>2.2900 2.4000 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL1_2_seat_vis'>
+        <pose>2.2900 2.4000 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL1_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL1_3_back_col'>
+        <pose>2.1900 2.9000 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL1_3_back_vis'>
+        <pose>2.1900 2.9000 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL1_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL1_3_seat_col'>
+        <pose>2.2900 2.9000 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL1_3_seat_vis'>
+        <pose>2.2900 2.9000 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR1_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR1_0_back_col'>
+        <pose>2.1900 4.9500 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR1_0_back_vis'>
+        <pose>2.1900 4.9500 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR1_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR1_0_seat_col'>
+        <pose>2.2900 4.9500 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR1_0_seat_vis'>
+        <pose>2.2900 4.9500 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR1_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR1_1_back_col'>
+        <pose>2.1900 5.4500 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR1_1_back_vis'>
+        <pose>2.1900 5.4500 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR1_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR1_1_seat_col'>
+        <pose>2.2900 5.4500 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR1_1_seat_vis'>
+        <pose>2.2900 5.4500 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR1_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR1_2_back_col'>
+        <pose>2.1900 5.9500 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR1_2_back_vis'>
+        <pose>2.1900 5.9500 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR1_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR1_2_seat_col'>
+        <pose>2.2900 5.9500 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR1_2_seat_vis'>
+        <pose>2.2900 5.9500 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR1_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR1_3_back_col'>
+        <pose>2.1900 6.4500 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR1_3_back_vis'>
+        <pose>2.1900 6.4500 0.6500 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR1_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR1_3_seat_col'>
+        <pose>2.2900 6.4500 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR1_3_seat_vis'>
+        <pose>2.2900 6.4500 0.4400 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padL2'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padL2_col'>
+        <pose>2.9900 2.2250 0.0575 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.1150</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padL2_vis'>
+        <pose>2.9900 2.2250 0.0575 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.1150</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padR2'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padR2_col'>
+        <pose>2.9900 5.6000 0.0575 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.1150</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padR2_vis'>
+        <pose>2.9900 5.6000 0.0575 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.1150</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL2_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL2_0_back_col'>
+        <pose>2.9100 1.4000 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL2_0_back_vis'>
+        <pose>2.9100 1.4000 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL2_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL2_0_seat_col'>
+        <pose>3.0100 1.4000 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL2_0_seat_vis'>
+        <pose>3.0100 1.4000 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL2_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL2_1_back_col'>
+        <pose>2.9100 1.9000 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL2_1_back_vis'>
+        <pose>2.9100 1.9000 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL2_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL2_1_seat_col'>
+        <pose>3.0100 1.9000 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL2_1_seat_vis'>
+        <pose>3.0100 1.9000 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL2_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL2_2_back_col'>
+        <pose>2.9100 2.4000 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL2_2_back_vis'>
+        <pose>2.9100 2.4000 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL2_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL2_2_seat_col'>
+        <pose>3.0100 2.4000 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL2_2_seat_vis'>
+        <pose>3.0100 2.4000 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL2_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL2_3_back_col'>
+        <pose>2.9100 2.9000 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL2_3_back_vis'>
+        <pose>2.9100 2.9000 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL2_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL2_3_seat_col'>
+        <pose>3.0100 2.9000 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL2_3_seat_vis'>
+        <pose>3.0100 2.9000 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR2_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR2_0_back_col'>
+        <pose>2.9100 4.9500 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR2_0_back_vis'>
+        <pose>2.9100 4.9500 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR2_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR2_0_seat_col'>
+        <pose>3.0100 4.9500 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR2_0_seat_vis'>
+        <pose>3.0100 4.9500 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR2_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR2_1_back_col'>
+        <pose>2.9100 5.4500 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR2_1_back_vis'>
+        <pose>2.9100 5.4500 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR2_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR2_1_seat_col'>
+        <pose>3.0100 5.4500 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR2_1_seat_vis'>
+        <pose>3.0100 5.4500 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR2_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR2_2_back_col'>
+        <pose>2.9100 5.9500 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR2_2_back_vis'>
+        <pose>2.9100 5.9500 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR2_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR2_2_seat_col'>
+        <pose>3.0100 5.9500 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR2_2_seat_vis'>
+        <pose>3.0100 5.9500 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR2_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR2_3_back_col'>
+        <pose>2.9100 6.4500 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR2_3_back_vis'>
+        <pose>2.9100 6.4500 0.6950 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR2_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR2_3_seat_col'>
+        <pose>3.0100 6.4500 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR2_3_seat_vis'>
+        <pose>3.0100 6.4500 0.4850 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padL3'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padL3_col'>
+        <pose>3.7100 2.2250 0.0800 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.1600</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padL3_vis'>
+        <pose>3.7100 2.2250 0.0800 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.1600</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padR3'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padR3_col'>
+        <pose>3.7100 5.6000 0.0800 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.1600</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padR3_vis'>
+        <pose>3.7100 5.6000 0.0800 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.1600</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL3_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL3_0_back_col'>
+        <pose>3.6300 1.4000 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL3_0_back_vis'>
+        <pose>3.6300 1.4000 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL3_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL3_0_seat_col'>
+        <pose>3.7300 1.4000 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL3_0_seat_vis'>
+        <pose>3.7300 1.4000 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL3_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL3_1_back_col'>
+        <pose>3.6300 1.9000 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL3_1_back_vis'>
+        <pose>3.6300 1.9000 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL3_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL3_1_seat_col'>
+        <pose>3.7300 1.9000 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL3_1_seat_vis'>
+        <pose>3.7300 1.9000 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL3_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL3_2_back_col'>
+        <pose>3.6300 2.4000 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL3_2_back_vis'>
+        <pose>3.6300 2.4000 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL3_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL3_2_seat_col'>
+        <pose>3.7300 2.4000 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL3_2_seat_vis'>
+        <pose>3.7300 2.4000 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL3_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL3_3_back_col'>
+        <pose>3.6300 2.9000 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL3_3_back_vis'>
+        <pose>3.6300 2.9000 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL3_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL3_3_seat_col'>
+        <pose>3.7300 2.9000 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL3_3_seat_vis'>
+        <pose>3.7300 2.9000 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR3_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR3_0_back_col'>
+        <pose>3.6300 4.9500 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR3_0_back_vis'>
+        <pose>3.6300 4.9500 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR3_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR3_0_seat_col'>
+        <pose>3.7300 4.9500 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR3_0_seat_vis'>
+        <pose>3.7300 4.9500 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR3_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR3_1_back_col'>
+        <pose>3.6300 5.4500 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR3_1_back_vis'>
+        <pose>3.6300 5.4500 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR3_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR3_1_seat_col'>
+        <pose>3.7300 5.4500 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR3_1_seat_vis'>
+        <pose>3.7300 5.4500 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR3_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR3_2_back_col'>
+        <pose>3.6300 5.9500 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR3_2_back_vis'>
+        <pose>3.6300 5.9500 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR3_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR3_2_seat_col'>
+        <pose>3.7300 5.9500 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR3_2_seat_vis'>
+        <pose>3.7300 5.9500 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR3_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR3_3_back_col'>
+        <pose>3.6300 6.4500 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR3_3_back_vis'>
+        <pose>3.6300 6.4500 0.7400 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR3_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR3_3_seat_col'>
+        <pose>3.7300 6.4500 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR3_3_seat_vis'>
+        <pose>3.7300 6.4500 0.5300 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padL4'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padL4_col'>
+        <pose>4.4300 2.2250 0.1025 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.2050</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padL4_vis'>
+        <pose>4.4300 2.2250 0.1025 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.2050</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padR4'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padR4_col'>
+        <pose>4.4300 5.6000 0.1025 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.2050</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padR4_vis'>
+        <pose>4.4300 5.6000 0.1025 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.2050</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL4_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL4_0_back_col'>
+        <pose>4.3500 1.4000 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL4_0_back_vis'>
+        <pose>4.3500 1.4000 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL4_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL4_0_seat_col'>
+        <pose>4.4500 1.4000 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL4_0_seat_vis'>
+        <pose>4.4500 1.4000 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL4_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL4_1_back_col'>
+        <pose>4.3500 1.9000 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL4_1_back_vis'>
+        <pose>4.3500 1.9000 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL4_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL4_1_seat_col'>
+        <pose>4.4500 1.9000 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL4_1_seat_vis'>
+        <pose>4.4500 1.9000 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL4_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL4_2_back_col'>
+        <pose>4.3500 2.4000 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL4_2_back_vis'>
+        <pose>4.3500 2.4000 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL4_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL4_2_seat_col'>
+        <pose>4.4500 2.4000 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL4_2_seat_vis'>
+        <pose>4.4500 2.4000 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL4_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL4_3_back_col'>
+        <pose>4.3500 2.9000 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL4_3_back_vis'>
+        <pose>4.3500 2.9000 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL4_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL4_3_seat_col'>
+        <pose>4.4500 2.9000 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL4_3_seat_vis'>
+        <pose>4.4500 2.9000 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR4_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR4_0_back_col'>
+        <pose>4.3500 4.9500 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR4_0_back_vis'>
+        <pose>4.3500 4.9500 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR4_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR4_0_seat_col'>
+        <pose>4.4500 4.9500 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR4_0_seat_vis'>
+        <pose>4.4500 4.9500 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR4_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR4_1_back_col'>
+        <pose>4.3500 5.4500 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR4_1_back_vis'>
+        <pose>4.3500 5.4500 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR4_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR4_1_seat_col'>
+        <pose>4.4500 5.4500 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR4_1_seat_vis'>
+        <pose>4.4500 5.4500 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR4_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR4_2_back_col'>
+        <pose>4.3500 5.9500 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR4_2_back_vis'>
+        <pose>4.3500 5.9500 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR4_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR4_2_seat_col'>
+        <pose>4.4500 5.9500 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR4_2_seat_vis'>
+        <pose>4.4500 5.9500 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR4_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR4_3_back_col'>
+        <pose>4.3500 6.4500 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR4_3_back_vis'>
+        <pose>4.3500 6.4500 0.7850 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR4_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR4_3_seat_col'>
+        <pose>4.4500 6.4500 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR4_3_seat_vis'>
+        <pose>4.4500 6.4500 0.5750 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padL5'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padL5_col'>
+        <pose>5.1500 2.2250 0.1250 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.2500</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padL5_vis'>
+        <pose>5.1500 2.2250 0.1250 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.2500</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padR5'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padR5_col'>
+        <pose>5.1500 5.6000 0.1250 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.2500</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padR5_vis'>
+        <pose>5.1500 5.6000 0.1250 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.2500</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL5_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL5_0_back_col'>
+        <pose>5.0700 1.4000 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL5_0_back_vis'>
+        <pose>5.0700 1.4000 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL5_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL5_0_seat_col'>
+        <pose>5.1700 1.4000 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL5_0_seat_vis'>
+        <pose>5.1700 1.4000 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL5_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL5_1_back_col'>
+        <pose>5.0700 1.9000 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL5_1_back_vis'>
+        <pose>5.0700 1.9000 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL5_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL5_1_seat_col'>
+        <pose>5.1700 1.9000 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL5_1_seat_vis'>
+        <pose>5.1700 1.9000 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL5_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL5_2_back_col'>
+        <pose>5.0700 2.4000 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL5_2_back_vis'>
+        <pose>5.0700 2.4000 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL5_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL5_2_seat_col'>
+        <pose>5.1700 2.4000 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL5_2_seat_vis'>
+        <pose>5.1700 2.4000 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL5_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL5_3_back_col'>
+        <pose>5.0700 2.9000 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL5_3_back_vis'>
+        <pose>5.0700 2.9000 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL5_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL5_3_seat_col'>
+        <pose>5.1700 2.9000 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL5_3_seat_vis'>
+        <pose>5.1700 2.9000 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR5_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR5_0_back_col'>
+        <pose>5.0700 4.9500 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR5_0_back_vis'>
+        <pose>5.0700 4.9500 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR5_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR5_0_seat_col'>
+        <pose>5.1700 4.9500 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR5_0_seat_vis'>
+        <pose>5.1700 4.9500 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR5_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR5_1_back_col'>
+        <pose>5.0700 5.4500 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR5_1_back_vis'>
+        <pose>5.0700 5.4500 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR5_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR5_1_seat_col'>
+        <pose>5.1700 5.4500 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR5_1_seat_vis'>
+        <pose>5.1700 5.4500 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR5_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR5_2_back_col'>
+        <pose>5.0700 5.9500 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR5_2_back_vis'>
+        <pose>5.0700 5.9500 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR5_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR5_2_seat_col'>
+        <pose>5.1700 5.9500 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR5_2_seat_vis'>
+        <pose>5.1700 5.9500 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR5_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR5_3_back_col'>
+        <pose>5.0700 6.4500 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR5_3_back_vis'>
+        <pose>5.0700 6.4500 0.8300 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR5_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR5_3_seat_col'>
+        <pose>5.1700 6.4500 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR5_3_seat_vis'>
+        <pose>5.1700 6.4500 0.6200 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padL6'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padL6_col'>
+        <pose>5.8700 2.2250 0.1475 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.2950</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padL6_vis'>
+        <pose>5.8700 2.2250 0.1475 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.2950</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padR6'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padR6_col'>
+        <pose>5.8700 5.6000 0.1475 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.2950</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padR6_vis'>
+        <pose>5.8700 5.6000 0.1475 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.2950</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL6_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL6_0_back_col'>
+        <pose>5.7900 1.4000 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL6_0_back_vis'>
+        <pose>5.7900 1.4000 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL6_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL6_0_seat_col'>
+        <pose>5.8900 1.4000 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL6_0_seat_vis'>
+        <pose>5.8900 1.4000 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL6_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL6_1_back_col'>
+        <pose>5.7900 1.9000 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL6_1_back_vis'>
+        <pose>5.7900 1.9000 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL6_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL6_1_seat_col'>
+        <pose>5.8900 1.9000 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL6_1_seat_vis'>
+        <pose>5.8900 1.9000 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL6_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL6_2_back_col'>
+        <pose>5.7900 2.4000 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL6_2_back_vis'>
+        <pose>5.7900 2.4000 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL6_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL6_2_seat_col'>
+        <pose>5.8900 2.4000 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL6_2_seat_vis'>
+        <pose>5.8900 2.4000 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL6_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL6_3_back_col'>
+        <pose>5.7900 2.9000 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL6_3_back_vis'>
+        <pose>5.7900 2.9000 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL6_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL6_3_seat_col'>
+        <pose>5.8900 2.9000 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL6_3_seat_vis'>
+        <pose>5.8900 2.9000 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR6_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR6_0_back_col'>
+        <pose>5.7900 4.9500 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR6_0_back_vis'>
+        <pose>5.7900 4.9500 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR6_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR6_0_seat_col'>
+        <pose>5.8900 4.9500 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR6_0_seat_vis'>
+        <pose>5.8900 4.9500 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR6_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR6_1_back_col'>
+        <pose>5.7900 5.4500 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR6_1_back_vis'>
+        <pose>5.7900 5.4500 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR6_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR6_1_seat_col'>
+        <pose>5.8900 5.4500 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR6_1_seat_vis'>
+        <pose>5.8900 5.4500 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR6_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR6_2_back_col'>
+        <pose>5.7900 5.9500 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR6_2_back_vis'>
+        <pose>5.7900 5.9500 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR6_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR6_2_seat_col'>
+        <pose>5.8900 5.9500 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR6_2_seat_vis'>
+        <pose>5.8900 5.9500 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR6_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR6_3_back_col'>
+        <pose>5.7900 6.4500 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR6_3_back_vis'>
+        <pose>5.7900 6.4500 0.8750 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR6_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR6_3_seat_col'>
+        <pose>5.8900 6.4500 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR6_3_seat_vis'>
+        <pose>5.8900 6.4500 0.6650 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padL7'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padL7_col'>
+        <pose>6.5900 2.2250 0.1700 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.3400</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padL7_vis'>
+        <pose>6.5900 2.2250 0.1700 0 0 0</pose>
+        <geometry><box><size>0.6200 2.3500 0.3400</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='padR7'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='padR7_col'>
+        <pose>6.5900 5.6000 0.1700 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.3400</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='padR7_vis'>
+        <pose>6.5900 5.6000 0.1700 0 0 0</pose>
+        <geometry><box><size>0.6200 2.0000 0.3400</size></box></geometry>
+        <material><ambient>0.74 0.71 0.66 1</ambient><diffuse>0.74 0.71 0.66 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL7_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL7_0_back_col'>
+        <pose>6.5100 1.4000 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL7_0_back_vis'>
+        <pose>6.5100 1.4000 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL7_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL7_0_seat_col'>
+        <pose>6.6100 1.4000 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL7_0_seat_vis'>
+        <pose>6.6100 1.4000 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL7_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL7_1_back_col'>
+        <pose>6.5100 1.9000 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL7_1_back_vis'>
+        <pose>6.5100 1.9000 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL7_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL7_1_seat_col'>
+        <pose>6.6100 1.9000 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL7_1_seat_vis'>
+        <pose>6.6100 1.9000 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL7_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL7_2_back_col'>
+        <pose>6.5100 2.4000 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL7_2_back_vis'>
+        <pose>6.5100 2.4000 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL7_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL7_2_seat_col'>
+        <pose>6.6100 2.4000 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL7_2_seat_vis'>
+        <pose>6.6100 2.4000 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL7_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL7_3_back_col'>
+        <pose>6.5100 2.9000 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL7_3_back_vis'>
+        <pose>6.5100 2.9000 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chL7_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chL7_3_seat_col'>
+        <pose>6.6100 2.9000 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chL7_3_seat_vis'>
+        <pose>6.6100 2.9000 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR7_0_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR7_0_back_col'>
+        <pose>6.5100 4.9500 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR7_0_back_vis'>
+        <pose>6.5100 4.9500 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR7_0_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR7_0_seat_col'>
+        <pose>6.6100 4.9500 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR7_0_seat_vis'>
+        <pose>6.6100 4.9500 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR7_1_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR7_1_back_col'>
+        <pose>6.5100 5.4500 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR7_1_back_vis'>
+        <pose>6.5100 5.4500 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR7_1_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR7_1_seat_col'>
+        <pose>6.6100 5.4500 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR7_1_seat_vis'>
+        <pose>6.6100 5.4500 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR7_2_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR7_2_back_col'>
+        <pose>6.5100 5.9500 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR7_2_back_vis'>
+        <pose>6.5100 5.9500 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR7_2_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR7_2_seat_col'>
+        <pose>6.6100 5.9500 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR7_2_seat_vis'>
+        <pose>6.6100 5.9500 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR7_3_back'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR7_3_back_col'>
+        <pose>6.5100 6.4500 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR7_3_back_vis'>
+        <pose>6.5100 6.4500 0.9200 0 0 0</pose>
+        <geometry><box><size>0.0700 0.4000 0.5200</size></box></geometry>
+        <material><ambient>0.1 0.14 0.34 1</ambient><diffuse>0.1 0.14 0.34 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='chR7_3_seat'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='chR7_3_seat_col'>
+        <pose>6.6100 6.4500 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='chR7_3_seat_vis'>
+        <pose>6.6100 6.4500 0.7100 0 0 0</pose>
+        <geometry><box><size>0.1600 0.4000 0.1000</size></box></geometry>
+        <material><ambient>0.2 0.28 0.52 1</ambient><diffuse>0.2 0.28 0.52 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='stage'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='stage_col'>
+        <pose>9.3250 4.0000 0.0800 0 0 0</pose>
+        <geometry><box><size>1.2500 6.8000 0.1600</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='stage_vis'>
+        <pose>9.3250 4.0000 0.0800 0 0 0</pose>
+        <geometry><box><size>1.2500 6.8000 0.1600</size></box></geometry>
+        <material><ambient>0.32 0.17 0.1 1</ambient><diffuse>0.32 0.17 0.1 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='stage_step'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='stage_step_col'>
+        <pose>8.6200 4.0000 0.0400 0 0 0</pose>
+        <geometry><box><size>0.1600 6.8000 0.0800</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='stage_step_vis'>
+        <pose>8.6200 4.0000 0.0400 0 0 0</pose>
+        <geometry><box><size>0.1600 6.8000 0.0800</size></box></geometry>
+        <material><ambient>0.32 0.17 0.1 1</ambient><diffuse>0.32 0.17 0.1 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='podium'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='podium_col'>
+        <pose>9.3000 2.0000 0.4500 0 0 0</pose>
+        <geometry><box><size>0.6000 0.7000 0.9000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='podium_vis'>
+        <pose>9.3000 2.0000 0.4500 0 0 0</pose>
+        <geometry><box><size>0.6000 0.7000 0.9000</size></box></geometry>
+        <material><ambient>0.42 0.34 0.26 1</ambient><diffuse>0.42 0.34 0.26 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='screen'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='screen_col'>
+        <pose>9.9800 4.0000 1.8000 0 0 0</pose>
+        <geometry><box><size>0.0200 3.4000 1.7000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='screen_vis'>
+        <pose>9.9800 4.0000 1.8000 0 0 0</pose>
+        <geometry><box><size>0.0200 3.4000 1.7000</size></box></geometry>
+        <material><ambient>0.1 0.1 0.12 1</ambient><diffuse>0.1 0.1 0.12 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='media0'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='media0_col'>
+        <pose>7.9000 5.8000 0.4000 0 0 0</pose>
+        <geometry><box><size>0.6000 0.4500 0.8000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='media0_vis'>
+        <pose>7.9000 5.8000 0.4000 0 0 0</pose>
+        <geometry><box><size>0.6000 0.4500 0.8000</size></box></geometry>
+        <material><ambient>0.55 0.5 0.46 1</ambient><diffuse>0.55 0.5 0.46 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name='media1'>
+      <pose>0 0 0 0 0 0</pose>
+      <collision name='media1_col'>
+        <pose>8.0500 2.0000 0.4000 0 0 0</pose>
+        <geometry><box><size>0.6000 0.4500 0.8000</size></box></geometry>
+        <surface><friction><ode><mu>0.7</mu><mu2>0.7</mu2></ode></friction></surface>
+      </collision>
+      <visual name='media1_vis'>
+        <pose>8.0500 2.0000 0.4000 0 0 0</pose>
+        <geometry><box><size>0.6000 0.4500 0.8000</size></box></geometry>
+        <material><ambient>0.55 0.5 0.46 1</ambient><diffuse>0.55 0.5 0.46 1</diffuse></material>
+      </visual>
+    </link>
+  </model>
+</sdf>

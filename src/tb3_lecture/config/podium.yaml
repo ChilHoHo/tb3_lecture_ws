@@ -1,0 +1,17 @@
+hall:
+  len: 10.0
+  width: 8.0
+robot_model: waffle_pi
+start_door:
+  x: 1.9
+  y: 7.0
+  z: 0.01
+  yaw: 0.0
+via_world:
+- x: 6.7
+  y: 7.0
+  yaw: 0.0
+goal_podium:
+  x: 7.2
+  y: 4.05
+  yaw: 3.141592653589793
