@@ -8,6 +8,13 @@
 > 📓 踩坑与解决记录 → [`DEVELOPMENT_LOG.md`](DEVELOPMENT_LOG.md)
 > 🚚 **打包部署到其它机器** → [`INSTALL_NOTES.md`](INSTALL_NOTES.md) + `scripts/package_src.sh`
 
+## 能力速览 / 实测基线
+- **核心**：无预建地图的实时建图+自主导航。Cartographer(SLAM 定位) 与 Nav2(规划避障) 并行，机器人从侧门自主开到舞台讲台，再可自主返回/随时停车重规划。
+- **场景**：程序生成的校园多功能厅（影院式密集座椅+缓坡看台+舞台+2 个走动演员），Waffle Pi 仿真。
+- **上位机**：RViz 实时显示 地图 / 机器人 / 绿色全局规划路线 / 蓝色跟踪轨迹 / 讲台目标 / 状态文字。
+- **实测（headless 全流程）**：到达用时 ~35–50 s；多数 run 落点误差 ≈0.02 m；少数 run 受 SLAM 地图锚点漂移影响偏 ~3 m（对策见 DEVELOPMENT_LOG §G）。
+- **验收工具**：`scripts/run_regression.sh N` 自动跑 N 次并汇总成功率/用时/误差。
+
 ## 一键运行（5 个终端，各自运行一个脚本）
 ```bash
 cd ~/tb3_lecture_ws/scripts

@@ -72,3 +72,14 @@ go_podium 节点：按【中途点→讲台】顺序发 /navigate_to_pose 目标
 - "一键直达"采用**分段目标**（先到右通道前端，再到讲台）：未知环境下一次规划穿越大片未建图区会直穿椅阵；分段让地图边推进边刷新，再由 Nav2 重规划第二段。两段均可随时被 Nav2 行为树按需重规划/恢复。
 - 立即停车：取消当前 action（Ctrl-C go_podium / 发送新目标=重规划）。更完整的上位机控制（命令话题/状态话题/停车/重规划）见 `lecture_control`（后续阶段，若已实现则在此引用）。
 - Cartographer 与 amcl **不可同时占用 map→odom**；本方案用 Cartographer 兼任定位，故不启动 map_server/amcl。
+
+## 6. 实测基线与已知边界
+> 数据来自 headless 全流程计时（门口→讲台，分两段），可随时用 `scripts/run_regression.sh N` 复测。
+
+| 指标 | 实测 |
+|---|---|
+| 一次全流程到达用时 | 约 **35–50 s**（两段：右通道中途点 ~15–25 s + 讲台段 ~10–25 s，视地图/环境） |
+| 成功落点精度（多数 run） | **≈ 0.02 m**（map 系位姿 vs 目标 (5.3, -2.95)） |
+| 已知偶发 | 个别 run 出现 **SLAM 地图锚点漂移**（map 系落点 y 偏 ~3 m），多发生于建图受动态干扰/回环较弱时；候选对策：开 IMU 融合（`cartographer_lecture.lua` 一行）、或导航时移除移动 actor。回归工具即是为此类偶发问题提供量化手段 |
+
+**已排障清单**（详见 DEVELOPMENT_LOG）：sim 时间未同步、costmap map_topic 需绝对 `/map`、多余 /tf 重映射、BT 依赖 behavior_server、`$(find-pkg-share)` 未展开、rolling 代价图边界等。

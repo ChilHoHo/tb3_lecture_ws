@@ -53,3 +53,26 @@
 - [x] **端到端回归工具**：`scripts/run_regression.sh`（无头自动 N 次跑"门口→讲台"，输出用时/成功/落点误差汇总）——偶发暴露了 SLAM 地图锚点漂移（个别 run 终点 map.y≈0 偏离讲台 ~3m，多数 run 精确到 ~0.02m），需进一步压制：候选＝启用 IMU 融合 A/B、或导航时减少移动 actor 干扰
 - [ ] 把 yaml 中的绝对路径(bt xml)改为 launch 运行时展开，便于移植
 - [ ] 巡游建图节点回归验证（功能已写，live 主流程不依赖）
+
+## G. 优化前后对比与实测基线
+### 关键修复（"能否跑通"）
+| 阶段 | 现象 | 根因 | 结果 |
+|---|---|---|---|
+| 初版联调 | Nav2 反复 abort/节点状态乱跳 | 官方 bringup 节点过多 + 竞态 | 精简 launch（controller/planner/behavior/bt）自管生命周期 |
+| 初版联调 | bt 不激活 | BT 需 behavior_server 的 spin/backup | 补 behavior_server |
+| 初版联调 | 全局代价图收不到图 | costmap 在 `/global_costmap` 命名空间，`map_topic` 需绝对 `/map` | 改绝对名（关键） |
+| 初版联调 | 发目标"瞬间完成"不动 | Nav2 未开 `use_sim_time`（墙钟 vs 仿真钟） | 各节点 `use_sim_time: true`（总根源） |
+| 初版联调 | `/tf` 两棵树 | 多余 `/tf→tf` 重映射 | 去掉重映射 |
+| 精度 | 早期成功 run 落点 0.1~1 m | 地图锚点漂移/回环弱 | 定制 `cartographer_lecture.lua`（提高回环优化频率、限定小厅回环距离）+ 分段导航 |
+
+### 实测（headless 全流程计时，优化后）
+| 指标 | 数值 |
+|---|---|
+| 到达用时 | ~35–50 s |
+| 成功 run 落点误差 | ≈ 0.02 m（map 系 vs (5.3,-2.95)） |
+| 偶发漂移 | 个别 run map.y 偏 ~3 m（候选对策见 §F） |
+| 复测方式 | `scripts/run_regression.sh 5` |
+
+### 可复现要点
+1. 统一 `scripts/env.sh` 定位工作区；2. 每终端一条 `run_*.sh`；
+3. 改参数后 `run_00_build.sh`；4. 地图/目标坐标见 `config/podium.yaml`（map 原点＝门口 spawn）。
