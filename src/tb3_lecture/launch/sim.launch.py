@@ -59,6 +59,8 @@ def generate_launch_description():
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     gui = LaunchConfiguration('gui', default='true')
+    # Waffle Pi 相机未被使用，默认不开相机桥以减载；演示要相机画面时 camera:=true
+    camera = LaunchConfiguration('camera', default='false')
     sx, sy, syaw = _spawn_pose()
 
     # ------------------------------------------------------------------ #
@@ -107,6 +109,7 @@ def generate_launch_description():
         name='image_bridge',
         output='screen',
         arguments=['/camera/image_raw'],
+        condition=IfCondition(camera),
     )
 
     rsp = IncludeLaunchDescription(
@@ -118,6 +121,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
         DeclareLaunchArgument('gui', default_value='true'),
+        DeclareLaunchArgument('camera', default_value='false'),
         gzserver,
         gzclient,
         spawn,

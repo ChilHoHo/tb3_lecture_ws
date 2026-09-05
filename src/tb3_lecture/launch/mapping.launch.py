@@ -30,11 +30,15 @@ os.environ.setdefault('TURTLEBOT3_MODEL', 'waffle_pi')
 
 def generate_launch_description():
     carto = get_package_share_directory('turtlebot3_cartographer')
+    pkg_dir = get_package_share_directory('tb3_lecture')
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     use_rviz = LaunchConfiguration('use_rviz', default='true')
     patrol = LaunchConfiguration('patrol', default='true')
     duration = LaunchConfiguration('duration', default='180.0')
+    # 使用本包定制的小厅 SLAM 配置（config/cartographer_lecture.lua）
+    config_dir = os.path.join(pkg_dir, 'config')
+    config_basename = 'cartographer_lecture.lua'
 
     cartographer = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -42,6 +46,8 @@ def generate_launch_description():
         launch_arguments={
             'use_sim_time': use_sim_time,
             'use_rviz': use_rviz,
+            'cartographer_config_dir': config_dir,
+            'configuration_basename': config_basename,
         }.items(),
     )
 
