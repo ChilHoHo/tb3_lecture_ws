@@ -76,3 +76,33 @@
 ### 可复现要点
 1. 统一 `scripts/env.sh` 定位工作区；2. 每终端一条 `run_*.sh`；
 3. 改参数后 `run_00_build.sh`；4. 地图/目标坐标见 `config/podium.yaml`（map 原点＝门口 spawn）。
+
+## H. 2026-09-09：压住地图锚点漂移（实测 3.6m→0.24m）+ 回程诊断
+### 触发：一次往返中"回程完全错乱"
+- 现象：`go` 到讲台正常，`return` 后 **gz 物理真值离门口还有 ~5 m**，而 SLAM 却报 `ARRIVED`；RViz 地图有**重影/鬼影灰斑 + 墙错位**。
+- 诊断（关键，避免以后再踩）：
+  1. **gz 世界坐标系 ≠ map 帧**（有固定偏置），**不能直接比对 raw 坐标**。判漂移用两个无偏量：`map→odom` 起点→终点增幅，或 gz 真值 起点/终点差值（固定偏置自动抵消）。
+  2. `map→odom` 增大**同时含**"轮式里程计累积误差被 SLAM 纠正"的正常部分，不能单独当漂移判据。
+  3. 实测基线：新鲜建图起点 `map→odom ≈ (0.02,-0.02)`；跑完一趟往返后涨到 `(0.097,3.636) |T|≈3.6 m` —— 这就是锚点漂移。
+- 根因：Cartographer 只吃 odometry+激光，**没开 IMU**；且回环优化距离/权重不足，抓不住"门口↔讲台↔门口"这种大闭环。
+
+### 已实施修复（`config/cartographer_lecture.lua` + `launch/mapping.launch.py`，commit `0301ad3`）
+| 项 | 改前→改后 | 意图 |
+|---|---|---|
+| `use_imu_data` | false→true | IMU 航向融合，抗偏航漂移 |
+| `optimize_every_n_nodes` | 40→12 | 全局优化更频 |
+| `global_sampling_ratio` | 0.003→0.02 | 更密全局约束 |
+| `max_constraint_distance` | 4→6 | 让大闭环够得着 |
+| `loop_closure_translation_weight` | 5→10 | 更信任闭环 |
+| mapping.launch.py | +`imu_link→waffle_pi/imu_link/tb3_imu` 静态别名 | **必需**：gz 的 IMU 帧是模型前缀怪名，直接开 `use_imu_data` 会让 cartographer 查不到该帧而**卡死不再建图** |
+
+### 实测（复测）
+- 讲台到达：replan 后 `ARRIVED`，map 位姿 `(5.310,-2.920)`，误差 ≈**0.04 m**。
+- 锚点：到讲台时 `map→odom` 停在 **0.24**（原 2.83）→ **漂移大幅压住**。
+- 顿卦：首次 `go` 偶发在 `(5.27,-2.74)` 距讲台 0.2m 处 abort（`follow_path` 被 halt），`replan` 即稳定到达——属瞬时卡顿，非硬故障。
+
+### 遗留：回程仍是**局部导航**问题（非 SLAM 漂移）
+- 现象：`return` 在 gz `(4.26,4.44)`（约半途）失败，状态 `ERROR`；用户观察到"**回程扫不到座位且激光乱飘**"。
+- Nav2 日志：`DWBLocalPlanner: No valid trajectories out of 819!` × 多 → `follow_path` abort。即**局部代价图被近场障碍四面围死**（scan 最近 0.12 m），DWB 无逃生轨迹。
+- 地图采样：讲台→门口直线 **90% 空闲**，说明不是"假空墙"，而是机器人**窜入座椅/动态物体的密集近场**（激光被密集/飘移物体主导）。
+- **候选下一步（未动）**：① 让 `return` 走"中途点→门口"同一走道，避免直穿座椅区；② 开启 Nav2 恢复行为(backup/spin)增强脱困；③ 评估 actor 鬼影对近场 costmap 的影响。这些属导航健壮性，与已压住的 SLAM 漂移分开处理。
