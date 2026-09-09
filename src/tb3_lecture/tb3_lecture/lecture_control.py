@@ -109,7 +109,10 @@ class LectureControl(Node):
             self.zero()
             if self.gh:
                 self.gh.cancel_goal_async()
-            self.seq = [dict(self.door, tag='door')]
+            # 回程走"去程的逆路线"(经中途点走道)；直接"讲台→门口"直线会横穿座椅场，
+            # 导致 DWB 被近场密集障碍围死("No valid trajectories")而 abort。
+            vias = [dict(w, tag='waypoint') for w in reversed(self.route[:-1])]
+            self.seq = vias + [dict(self.door, tag='door')]
             self.i = 0
             self.set_status('RETURNING')
             self.drive_next()
