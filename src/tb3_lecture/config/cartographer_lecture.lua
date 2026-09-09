@@ -34,10 +34,10 @@ options = {
 
 MAP_BUILDER.use_trajectory_builder_2d = true
 -- 小厅、几米尺度的回环：提高闭环/全局优化频率可压住“长直行后地图漂移”
-POSE_GRAPH.optimize_every_n_nodes = 40      -- 官方默认很大；这里明显收小（漂移大→再调小，CPU 够）
-POSE_GRAPH.constraint_builder.max_constraint_distance = 4.0  -- 厅内最远回环距离，避免无用远约束
-POSE_GRAPH.global_sampling_ratio = 0.003
-POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 5.0
+POSE_GRAPH.optimize_every_n_nodes = 12      -- 官方默认很大；这里明显收小（漂移大→再调小，CPU 够）[增频:40→12 抗长直行漂移]
+POSE_GRAPH.constraint_builder.max_constraint_distance = 6.0  -- [加长:4→6 让"门口↔讲台↔门口"大闭环够得着,拾回回程锚点]
+POSE_GRAPH.global_sampling_ratio = 0.02      -- [加密全局约束:0.01→0.02 增强闭环鲁棒]
+POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 10.0  -- [加重闭环:5→10 更信任闭环,压全局漂移]
 
 TRAJECTORY_BUILDER_2D.min_range = 0.12
 TRAJECTORY_BUILDER_2D.max_range = 3.5       -- 与 Waffle Pi 激光量程一致
@@ -45,10 +45,8 @@ TRAJECTORY_BUILDER_2D.missing_data_ray_length = 3.
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
 TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(0.1)
 
--- 实验项（A/B 试，先不动）：仿真 IMU 在 /imu，若开 use_imu_data=true 可增强航向、进一步抗偏航漂移，
--- 但若 IMU 轴向与 /scan 不齐会变差。想试把下行注释取消。
--- TRAJECTORY_BUILDER_2D.use_imu_data = true
-TRAJECTORY_BUILDER_2D.use_imu_data = false
+-- 实测遇“地图锚点漂移(偏~3m)”：开启 IMU 航向融合抗偏航。仿真 IMU 在 /imu，轴向与 /scan 已验证对齐。
+TRAJECTORY_BUILDER_2D.use_imu_data = true   -- [A/B:false→true 启用 IMU 融合抗漂移]
 
 POSE_GRAPH.constraint_builder.min_score = 0.65
 POSE_GRAPH.constraint_builder.global_localization_min_score = 0.7

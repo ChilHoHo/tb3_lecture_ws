@@ -60,11 +60,24 @@ def generate_launch_description():
         condition=IfCondition(patrol),
     )
 
+    # IMU 帧别名：gz 仿真把 IMU 传感器帧发成模型前缀的怪异名字
+    #   (waffle_pi/imu_link/tb3_imu)，而 Cartographer 用 tracking_frame=imu_link。
+    #   加一个恒等静态变换，让 Cartographer 能查到该源帧、把 IMU 航向真正融合进来。
+    imu_frame_alias = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['0', '0', '0', '0', '0', '0',
+                   'imu_link', 'waffle_pi/imu_link/tb3_imu'],
+        name='imu_frame_alias',
+        output='screen',
+    )
+
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
         DeclareLaunchArgument('use_rviz', default_value='true'),
         DeclareLaunchArgument('patrol', default_value='true'),
         DeclareLaunchArgument('duration', default_value='180.0'),
+        imu_frame_alias,
         cartographer,
         patrol_node,
     ])
