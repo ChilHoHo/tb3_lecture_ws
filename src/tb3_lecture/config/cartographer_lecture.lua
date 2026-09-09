@@ -36,7 +36,7 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 -- 小厅、几米尺度的回环：提高闭环/全局优化频率可压住“长直行后地图漂移”
 POSE_GRAPH.optimize_every_n_nodes = 12      -- 官方默认很大；这里明显收小（漂移大→再调小，CPU 够）[增频:40→12 抗长直行漂移]
 POSE_GRAPH.constraint_builder.max_constraint_distance = 6.0  -- [加长:4→6 让"门口↔讲台↔门口"大闭环够得着,拾回回程锚点]
-POSE_GRAPH.global_sampling_ratio = 0.02      -- [加密全局约束:0.01→0.02 增强闭环鲁棒]
+POSE_GRAPH.global_sampling_ratio = 0.02      -- [加密全局约束:0.003→0.02 增强闭环鲁棒]
 POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 10.0  -- [加重闭环:5→10 更信任闭环,压全局漂移]
 
 TRAJECTORY_BUILDER_2D.min_range = 0.12
